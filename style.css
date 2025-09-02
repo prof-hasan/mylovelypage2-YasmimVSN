@@ -1,0 +1,444 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #333;
+  line-height: 1.6;
+  font-family: 'Sawarabi Mincho', serif;
+  background: linear-gradient(180deg, #fff, #f5e6e8);
+  background-size: cover;
+}
+
+h1,
+h2,
+h3,
+.logo {
+  font-family: 'Zen Tokyo Zoo', cursive;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #d62828;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.menu a:hover {
+  color: #d62828;
+  border-bottom: 2px solid #d62828;
+}
+
+.menu a.active {
+  color: #d62828;
+  font-weight: bold;
+  border-bottom: 2px solid #d62828;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+/* PÁGINA INICIAL */
+
+.intro {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 3rem auto;
+  text-align: center;
+}
+
+.intro h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.intro p {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: #222;
+  text-align: justify;
+}
+
+.intro ul {
+  list-style: none;
+  margin: 1rem 0;
+}
+
+.intro ul li {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+  color: #222;
+}
+
+/* PÁGINA HISTÓRIA */
+
+.bloco-introducao {
+  background: url('fundo.jpg') repeat center center/cover;
+  /* link imagem: https://br.freepik.com/vetores-gratis/fundo-retro-abstrato-com-textura-grunge_84035626.htm#fromView=keyword&page=1&position=23&uuid=6195abd2-48ab-4992-9421-7686e88e0c38&query=Fundo+japones */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+  position: relative;
+}
+
+.bloco-introducao::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.texto-intro {
+  position: relative;
+  z-index: 1;
+  max-width: 1000px;
+  padding: 2.5rem 3rem;
+  border-radius: 12px;
+}
+
+.texto-intro h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+.texto-intro p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: white;
+  margin-bottom: 1.2rem;
+  text-align: justify;
+}
+
+.linha-tempo {
+  max-width: 1100px;
+  margin: 4rem auto;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.linha-tempo h2 {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #d62828;
+}
+
+.timeline {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.timeline th,
+.timeline td {
+  border: 1px solid #ddd;
+  padding: 0.8rem;
+  font-size: 1rem;
+  text-align: justify;
+}
+
+.timeline th {
+  background: #f4f4f4;
+  text-align: center;
+}
+
+.timeline tr:nth-child(even) {
+  background: #fafafa;
+}
+
+/* PÁGINA LINGUAGEM */
+
+.hero {
+  height: 100vh;
+  background: url('fundolinguagem.jpg') no-repeat center center/cover;
+  /* link imagem: https://discover.hubpages.com/education/highlighting-nouns-in-japanese-language */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 2rem;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.content {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 5px;
+  max-width: 1100px;
+  margin: 3rem auto;
+}
+
+.bloco {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.bloco.reverse {
+  flex-direction: row-reverse;
+}
+
+.bloco .texto {
+  flex: 1;
+}
+
+.bloco .texto h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #d62828;
+}
+
+.bloco .texto p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+  text-align: justify;
+}
+
+.bloco .imagem {
+  flex: 1;
+}
+
+.bloco .imagem img {
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 900px) {
+
+  .bloco,
+  .bloco.reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .bloco .imagem {
+    margin-top: 1rem;
+  }
+
+  .bloco .imagem img {
+    border-radius: 0 0 12px 12px !important;
+  }
+}
+
+/* PÁGINA GASTRONOMIA */
+
+.recipes {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding: 3rem 1rem;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.card.overlap {
+  flex-direction: row;
+}
+
+.card.overlap.reverse {
+  flex-direction: row-reverse;
+}
+
+.card.overlap .card-text {
+  flex: 1;
+  background: #d62828;
+  color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.card.overlap .card-img {
+  flex: 1;
+  position: relative;
+  margin-left: -60px;
+  z-index: 2;
+}
+
+.card.overlap.reverse .card-img {
+  margin-left: 0;
+  margin-right: -60px;
+}
+
+.card-img img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  background-color: white;
+}
+
+.card-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  margin-left: 4rem;
+  color: #fff;
+}
+
+.card-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0 4rem;
+  text-align: justify;
+}
+
+.card-text .featured {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #ffd700;
+  margin-bottom: 0.8rem;
+  display: block;
+}
+
+@media (max-width: 900px) {
+
+  .card,
+  .card.reverse {
+    flex-direction: column;
+  }
+
+  .card.overlap .card-img,
+  .card.overlap.reverse .card-img {
+    margin: -40px 0 0 0;
+    /* sobreposição vertical */
+  }
+}
+
+/*FOOTER */
+
+footer {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  margin-top: 3rem;
+  border-top: 1px solid #ddd;
+  text-align: left;
+  color: #333;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+footer h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #d62828;
+}
+
+footer p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.video-list {
+  list-style: none;
+  margin: 0.3rem 0 1rem 0;
+  padding: 0;
+}
+
+.video-list li {
+  margin: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.video-list a {
+  color: #d62828;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.video-list a:hover {
+  transform: scale(1.02);
+}
+
+.video-list span {
+  font-size: 1rem;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
